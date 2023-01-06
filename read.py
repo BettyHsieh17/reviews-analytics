@@ -5,5 +5,11 @@ with open('reviews.txt','r') as f:
 		data.append(line)
 		count += 1
 		if count % 1000 == 0: # 百分比符號%表示求餘數 
-		print(len(data)) #讀取檔案的進度
-print(len(data))
+			print(len(data)) #讀取檔案的進度
+print('檔案讀取完了,總共有',len(data), '筆資料')
+
+sum_len = 0
+for d in data:
+	sum_len += len(d)
+
+print('留言平均長度為', sum_len/len(data)) 
